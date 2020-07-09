@@ -26,7 +26,7 @@ function RenderItem(props) {
   else if (props.errMess) {
       return(
           <View> 
-              <Text>{props.erreMess}</Text>
+              <Text>{props.errMess}</Text>
           </View>
       );
   }
@@ -61,16 +61,16 @@ class Home extends Component {
           <ScrollView>
               <RenderItem item={this.props.dishes.dishes.filter((dish) => dish.featured)[0]}
                     isLoading={this.props.dishes.isLoading}
-                    erreMess={this.props.dishes.erreMess} 
+                    errMess={this.props.dishes.errMess} 
                     />
               <RenderItem item={this.props.promotions.promotions.filter((promo) => promo.featured)[0]}
-                  isLoading={this.props.promotions.isLoading}
-                  erreMess={this.props.promotions.erreMess} 
-                  />
+                    isLoading={this.props.promotions.isLoading}
+                    errMess={this.props.promotions.errMess} 
+                    />
               <RenderItem item={this.props.leaders.leaders.filter((leader) => leader.featured)[0]}
-                  isLoading={this.props.leaders.isLoading}
-                  erreMess={this.props.leaders.erreMess} 
-                  />
+                    isLoading={this.props.leaders.isLoading}
+                    errMess={this.props.leaders.errMess} 
+                    />
           </ScrollView>
       );
   }
