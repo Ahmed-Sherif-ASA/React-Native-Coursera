@@ -17,6 +17,9 @@ const mapDispatchToProps = dispatch => ({
   postFavorite: (dishId) => dispatch(postFavorite(dishId))
 })
 
+
+
+
 function RenderDish(props) {
 
     const dish = props.dish;
